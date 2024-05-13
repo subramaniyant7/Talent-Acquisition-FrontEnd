@@ -10,7 +10,7 @@ const Middleware = (req) => {
 
   if (pathName.toLowerCase() === "/login") {
     if (cookieData && cookieData?.value) {
-      return NextResponse.redirect("http://localhost:3000");
+      return NextResponse.redirect("https://talent-acquisition-front-end-delta.vercel.app");
     }
   }
 
@@ -26,12 +26,12 @@ const Middleware = (req) => {
       let parsedEndTime = parseDateString(endTime);
       if (decoded && parsedBeginningTime > parsedEndTime) {
         req.cookies.has(NEXT_TOKEN) && req.cookies.delete(NEXT_TOKEN);
-        return NextResponse.redirect("http://localhost:3000" + "/login");
+        return NextResponse.redirect("https://talent-acquisition-front-end-delta.vercel.app" + "/login");
       } else {
         return NextResponse.next();
       }
     } else {
-      return NextResponse.redirect("http://localhost:3000" + "/login");
+      return NextResponse.redirect("https://talent-acquisition-front-end-delta.vercel.app" + "/login");
     }
   }
   return NextResponse.next();
