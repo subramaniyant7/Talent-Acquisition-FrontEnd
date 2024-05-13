@@ -22,7 +22,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 import { toggleTheme } from "@/store/reducers/theme";
-import { dashboardSelector, userLogout, getNotifications } from "@/store/reducers/dashboard";
+import { dashboardSelector, userLogout } from "@/store/reducers/dashboard";
 import { HOME, INTERVIEW_STATUS_FORM_1, P_M_MESSAGES, P_M_NOTIFICATIONS, P_M_PROFILE, P_M_REQUEST_STATUS_1 } from "@/constants/ROUTES";
 
 const HeaderSearch = dynamic(() => import("./HeaderSearch"));
@@ -36,9 +36,6 @@ function HeadersTop() {
   const dashboardData = useSelector(dashboardSelector)
   // const darkMode = useSelector((state: RootState) => state.theme.darkMode);
 
-  useEffect(() => {
-    dispatch(getNotifications())
-  }, [])
   const handleLogout = async () => {
     let data = {
       "refresh_token": dashboardData?.login?.refresh_token

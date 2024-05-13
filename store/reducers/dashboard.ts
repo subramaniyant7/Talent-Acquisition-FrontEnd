@@ -12,10 +12,8 @@ import {
   GET_TICKET_LIST_API,
   GET_TODAY_MEETING_DETAILS_API,
   GET_UPCOMINGS_API,
-  INVENTORY_ASSETS_API,
   LOGIN_API,
   LOGOUT_API,
-  NOTIFICATIONS_API,
   USER_ACCOUNT_MANAGEMENT_ACCOUNT_API,
 } from "@/utils/API";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
@@ -23,7 +21,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import Cookies from "js-cookie"; // Import the js-cookie library
 
 // Helper function to handle common async thunk logic
-const createAsyncThunkHandler = (apiFunction, propName, onLoginSuccess?) =>
+const createAsyncThunkHandler = (apiFunction:any, propName:any, onLoginSuccess?:any) =>
   createAsyncThunk(`dashboard/${propName}`, async (data: any) => {
     try {
       // Call the API function with provided data
@@ -90,7 +88,7 @@ export const getHirings = createAsyncThunkHandler(
 export const userlogin = createAsyncThunkHandler(
   LOGIN_API,
   "login",
-  (response) => {
+  (response:any) => {
     // Assuming response contains session information such as user data, access token, etc.
     const { access_token, user_email, user_id, refresh_token } = response;
     // Store user data and access token in cookies
@@ -106,22 +104,13 @@ export const getTicketList = createAsyncThunkHandler(
   "ticket_List"
 );
 
-export const userLogout = createAsyncThunkHandler(LOGOUT_API, "logout");
+export const userLogout: any = createAsyncThunkHandler(LOGOUT_API, "logout");
 
 export const userAccountManagementAccount = createAsyncThunkHandler(
   USER_ACCOUNT_MANAGEMENT_ACCOUNT_API,
   "user_account_management"
 );
 
-export const inventoryAssets = createAsyncThunkHandler(
-  INVENTORY_ASSETS_API,
-  "inventory_Assets"
-);
-
-export const getNotifications = createAsyncThunkHandler(
-  NOTIFICATIONS_API,
-  "notification_list"
-);
 
 export const getCalendarEvent : any = createAsyncThunkHandler(
   CALENDER_EVENT_API,
@@ -169,7 +158,7 @@ const dashboardSlice = createSlice({
         (action) =>
           action.type.startsWith("dashboard/") &&
           action.type.endsWith("/fulfilled"),
-        (state, action) => {
+        (state : any, action: any) => {
           state.loading = false;
           const propName = action.type.split("/")[1]; // Extract property name from action type
           state[propName] = action.payload;
