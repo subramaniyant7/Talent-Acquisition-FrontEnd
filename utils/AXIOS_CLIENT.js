@@ -12,7 +12,7 @@ export const AXIOS_CLIENT = axios.create({
 
 AXIOS_CLIENT.interceptors.request.use(
   (config) => {
-    const token = "asdf";
+    const token = "";
     if (token) {
       config.headers["Authorization"] = "Bearer " + token;
     }

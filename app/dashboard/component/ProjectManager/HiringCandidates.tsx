@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-function AppointmentItem(props) {
+function AppointmentItem(props:any) {
   return (
     <div className="row mt-4 align-items-center ">
       <div className="col-3 pe-0">

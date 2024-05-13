@@ -216,17 +216,23 @@ export default function P_M_Todo0() {
     }
   }, [calendar_events_list]);
 
+  const startOfMonth = moment().startOf('month').toDate();
+  const endOfMonth   = moment().endOf('month').toDate();
+
+
   useEffect(() => {
     dispatch(
       getCalendarEvent(
-        `from_date=${startOfWeek.getFullYear()}-${
-          startOfWeek.getMonth() + 1
-        }-${startOfWeek.getDate()}&to_date=${endOfWeek.getFullYear()}-${
-          endOfWeek.getMonth() + 1
-        }-${endOfWeek.getDate()}`
+        `from_date=${startOfMonth.getFullYear()}-${
+          startOfMonth.getMonth() + 1
+        }-${startOfMonth.getDate()}&to_date=${endOfMonth.getFullYear()}-${
+          endOfMonth.getMonth() + 1
+        }-${endOfMonth.getDate()}`
       )
     );
   }, []);
+
+  
 
   return (
     <section className="">
