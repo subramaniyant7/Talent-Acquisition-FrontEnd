@@ -71,7 +71,7 @@ export default function AppointmentsPage() {
         </Link>
       </div>
 
-      {dashboardData?.upcomings_list?.slice(0,3)?.map((appointment, index) => (
+      {dashboardData?.upcomings_list?.slice(0,3)?.map((appointment:any, index:any) => (
         <AppointmentItem key={index} {...appointment} />
       ))}
     </div>

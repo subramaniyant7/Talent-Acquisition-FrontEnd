@@ -143,7 +143,7 @@ const top100Films = [
   { title: "Monty Python and the Holy Grail", year: 1975 },
 ];
 
-function HistoryTab(params: type) {
+function HistoryTab(params: any) {
   return (
     <>
       <div className=" p-3">

@@ -8,7 +8,6 @@ import {
   JSXElementConstructor,
   ReactNode,
   ReactPortal,
-  PromiseLikeOfReactNode,
 } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
@@ -16,16 +15,22 @@ import MenuItem from "@mui/material/MenuItem";
 import FilterListIcon from "@mui/icons-material/FilterList";
 
 function PostedJobsTop(props: {
-  titleName:
+  titleName: 
     | string
     | number
     | boolean
     | ReactElement<any, string | JSXElementConstructor<any>>
     | Iterable<ReactNode>
     | ReactPortal
-    | PromiseLikeOfReactNode
     | null
-    | undefined;
+    | undefined
+    | any;
+    className : any,
+    classTitle : any,
+    classSamll: any,
+    viewAllPath : any,
+    samllText : any,
+    filterBtnClass : any
 }) {
   // filter btn
   const [filterBtn, setfilterBtn] = React.useState<null | HTMLElement>(null);
@@ -41,7 +46,7 @@ function PostedJobsTop(props: {
   return (
     <>
       <div
-        className={`row justify-between align-items-center p-3  ${props.className}`}
+        className={`row justify-between align-items-center p-3  ${props?.className}`}
       >
         <div className="col-md-5 col-12 col-lg-4 d-flex mb-3 mb-md-0 justify-between align-items-center ">
           <h4 className={`small_historyText  ${props?.classTitle}`}>

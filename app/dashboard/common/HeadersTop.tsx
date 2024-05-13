@@ -389,7 +389,7 @@ function HeadersTop() {
   return (
     <>
       <Box className="navbarTop bg-primaryOne" sx={{ flexGrow: 1 }}>
-        <AppBar top={0} position="fixed">
+        <AppBar position="fixed">
           <Toolbar>
             <Typography
               variant="h6"

@@ -32,7 +32,7 @@ function CandidateStatus() {
             </tr>
           </thead>
           <tbody>
-            {dashboardData?.candidate_status_list?.slice(0, 6)?.map((list) => (
+            {dashboardData?.candidate_status_list?.slice(0, 6)?.map((list:any) => (
               <tr key={list?.candidate_details?.id}>
                 <td>{list?.job_details?.id}</td>
                 <td>{list?.candidate_details?.candidate_firstName + " " + list?.candidate_details?.candidate_lastName}</td>

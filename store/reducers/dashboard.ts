@@ -46,7 +46,7 @@ const createAsyncThunkHandler = (apiFunction:any, propName:any, onLoginSuccess?:
   });
 
 // Define async thunks using the helper function
-export const getCandidateStatusList = createAsyncThunkHandler(
+export const getCandidateStatusList : any = createAsyncThunkHandler(
   GET_CANDIDATE_STATUS_API,
   "candidate_status_list"
 );
@@ -85,7 +85,7 @@ export const getHirings = createAsyncThunkHandler(
   GET_HIRED_API,
   "hirings_list"
 );
-export const userlogin = createAsyncThunkHandler(
+export const userlogin: any = createAsyncThunkHandler(
   LOGIN_API,
   "login",
   (response:any) => {
