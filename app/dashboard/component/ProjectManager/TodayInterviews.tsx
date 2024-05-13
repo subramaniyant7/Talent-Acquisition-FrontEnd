@@ -7,7 +7,7 @@ function TodayInterviews() {
                         <div className="border-end w-100 pt-3 text-center">
                             <img className="w-[100px] h-[100px] rounded-full border-3 border-blue-500 mx-auto" src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg" alt="" />
 
-                            <h3 className="text-[16px] text-center mt-3">John Smith</h3>
+                            {/* <h3 className="text-[16px] text-center mt-3">John Smith</h3> */}
                             <h3 className="text-[12px] text-center mt-1">Senior Python Developer</h3>
 
                             <div className="row w-100 mx-0 border-top mt-3 ">

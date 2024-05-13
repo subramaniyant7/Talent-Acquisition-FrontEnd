@@ -51,7 +51,7 @@ export default function P_M_Todo0() {
   ];
   const [selectedMonth, setSelectedMonth] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
-  const [activeEventModal, setActiveEventModal] = useState();
+  const [activeEventModal, setActiveEventModal] = useState<any>();
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [events, setEvents] = useState(myEventsList);
 
@@ -115,7 +115,7 @@ export default function P_M_Todo0() {
     dispatch(getCalendarMeetingEvent(`id=${id}`));
   }, []);
 
-  const handleSelect = (event: any, e) => {
+  const handleSelect = (event: any, e:any) => {
     const { start, end } = event;
     setActiveEventModal(event);
     setPosition({ x: e.clientX, y: e.clientY });
@@ -179,13 +179,12 @@ export default function P_M_Todo0() {
       },
     });
 
-  const { components, defaultDate, views, scrollToTime } = useMemo(
+  const { components, defaultDate,  scrollToTime } = useMemo(
     () => ({
       components: {
         timeSlotWrapper: ColoredDateCellWrapper,
       },
       defaultDate: new Date(today.getFullYear(), today.getMonth(), today.getDate()),
-      views: Object.keys(Views).map((k) => Views[k]),
       scrollToTime: new Date(1970, 1, 1, 6),
     }),
     []
