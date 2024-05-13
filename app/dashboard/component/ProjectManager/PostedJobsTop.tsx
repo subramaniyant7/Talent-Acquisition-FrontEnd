@@ -25,12 +25,12 @@ function PostedJobsTop(props: {
     | null
     | undefined
     | any;
-    className : any,
-    classTitle : any,
-    classSamll: any,
-    viewAllPath : any,
-    samllText : any,
-    filterBtnClass : any
+    className? : any,
+    classTitle? : any,
+    classSamll?: any,
+    viewAllPath? : any,
+    samllText? : any,
+    filterBtnClass? : any
 }) {
   // filter btn
   const [filterBtn, setfilterBtn] = React.useState<null | HTMLElement>(null);

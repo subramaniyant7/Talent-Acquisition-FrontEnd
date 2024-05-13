@@ -24,7 +24,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Loader from "@/app/dashboard/common/Loader";
 import { dashboardSelector, userlogin, getActivities, getHirings, getInterviewAndHiredDetails, getPostedJobList, getTodayMeetingDetailsList, getUpcomings, getPostedJobActiveList } from "@/store/reducers/dashboard";
-import { P_M_JOB_DESCRIPTIONS1, P_M_JOB_DESCRIPTIONS4 } from "@/constants/ROUTES";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -61,7 +60,7 @@ export default function Home() {
     value: number;
   }
 
-  function CustomTabPanel(props: TabPanelProps) {
+  function CustomTabPanel(props: any) {
     const { children, value, index, ...other } = props;
 
     return (

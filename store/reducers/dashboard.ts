@@ -51,37 +51,37 @@ export const getCandidateStatusList : any = createAsyncThunkHandler(
   "candidate_status_list"
 );
 
-export const getInterviewAndHiredDetails = createAsyncThunkHandler(
+export const getInterviewAndHiredDetails: any = createAsyncThunkHandler(
   GET_INTERVIEW_AND_HIRED_DETAILS_API,
   "interview_and_hired_details"
 );
 
-export const getPostedJobList = createAsyncThunkHandler(
+export const getPostedJobList: any = createAsyncThunkHandler(
   GET_POSTED_JOB_LISTS_API,
   "posted_job_list"
 );
 
-export const getPostedJobActiveList = createAsyncThunkHandler(
+export const getPostedJobActiveList: any = createAsyncThunkHandler(
   GET_POSTED_JOB_Active_LISTS_API,
   "posted_job_active_list"
 );
 
-export const getTodayMeetingDetailsList = createAsyncThunkHandler(
+export const getTodayMeetingDetailsList: any = createAsyncThunkHandler(
   GET_TODAY_MEETING_DETAILS_API,
   "today_meeting_details_list"
 );
 
-export const getActivities = createAsyncThunkHandler(
+export const getActivities: any = createAsyncThunkHandler(
   GET_ACTIVITIES_API,
   "activities_list"
 );
 
-export const getUpcomings = createAsyncThunkHandler(
+export const getUpcomings: any = createAsyncThunkHandler(
   GET_UPCOMINGS_API,
   "upcomings_list"
 );
 
-export const getHirings = createAsyncThunkHandler(
+export const getHirings: any = createAsyncThunkHandler(
   GET_HIRED_API,
   "hirings_list"
 );
