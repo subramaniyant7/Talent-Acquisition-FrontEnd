@@ -93,7 +93,7 @@ export const userlogin: any = createAsyncThunkHandler(
     const { access_token, user_email, user_id, refresh_token } = response;
     // Store user data and access token in cookies
     Cookies.set(
-      ACCESS_TOKEN,
+      ACCESS_TOKEN as string,
       JSON.stringify({ access_token, user_email, user_id, refresh_token })
     );
   }

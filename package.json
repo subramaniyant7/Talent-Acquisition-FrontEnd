@@ -52,8 +52,10 @@
     "sass": "^1.72.0"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
+    "@types/react-big-calendar": "^1.8.9",
     "@types/react-date-range": "^1.4.9",
     "@types/react-dom": "^18",
     "@types/react-gauge-chart": "^0.4.3",
